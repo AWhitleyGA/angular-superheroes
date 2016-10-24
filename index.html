@@ -8,16 +8,18 @@
 <body ng-controller="superheroesController as vm">
   <header>
     <h1>Superhero Finder</h1>
+    Search: <input type="text" ng-model="vm.heroSearch">
   </header>
   <main>
-    <div ng-repeat="superhero in vm.superheroes" class="superhero">
+    <div ng-repeat="superhero in vm.superheroes | filter: vm.heroSearch | orderBy: vm.heroOrder" class="superhero ng-class: superhero.universe">
       <div class="superhero-image" ng-style="{'background-image':'url({{superhero.img_url}})','background-size':'cover','background-position':'center top','background-repeat':'no-repeat'}">
       </div>
-      <div  class="superhero-info ng-class: superhero.universe">
+      <div class="superhero-info">
         <div class="team-logo" ng-style="{'background-image':'url({{superhero.team_logo}})','background-size':'contain','background-position':'center top','background-repeat':'no-repeat'}" ></div>
         <h3>{{superhero.name}}</h3>
         <p>{{superhero.affiliation}}</p>
         <p>{{superhero.phone_number}}</p>
+        <button ng-click="vm.setHeroOrder({{superhero.name}})">Promote</button>
       </div>
     </div>
   </main>

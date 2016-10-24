@@ -24,4 +24,9 @@ angular
 
 function superheroesController() {
   this.superheroes = superheroData
+  this.heroSearch = ''
+  this.heroOrder = ''
+  this.setHeroOrder = function(input) {
+    this.heroOrder = input
+  }
 }

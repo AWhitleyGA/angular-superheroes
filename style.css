@@ -8,6 +8,10 @@ body {
   background: red;
 }
 
+.dc{
+  background: grey;
+}
+
 
 .team-logo {
   width: 20px;
@@ -33,13 +37,13 @@ h1 {
   font-size: 3.0em;
 }
 main {
-  padding-top: 150px;
   width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  padding-top: 150px;
 }
 
 .superhero {
@@ -49,7 +53,7 @@ main {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 5px;
+  border: 2px solid black;
 }
 
 .superhero-image {
@@ -64,7 +68,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.8);
   color: white;
 }
 .team-logo {
