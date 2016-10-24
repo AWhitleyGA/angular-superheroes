@@ -9,9 +9,10 @@
   <header>
     <h1>Superhero Finder</h1>
     Search: <input type="text" ng-model="vm.heroSearch">
+    <div class="superhero-image" ng-style="{'background-image':'url('+vm.selectedHero+')','background-size':'contain','background-position':'center top','background-repeat':'no-repeat'}">
   </header>
   <main>
-    <div ng-repeat="superhero in vm.superheroes | filter: vm.heroSearch | orderBy: vm.heroOrder" class="superhero ng-class: superhero.universe">
+    <div ng-repeat="superhero in vm.superheroes | filter: vm.heroSearch" class="superhero ng-class: superhero.universe">
       <div class="superhero-image" ng-style="{'background-image':'url({{superhero.img_url}})','background-size':'cover','background-position':'center top','background-repeat':'no-repeat'}">
       </div>
       <div class="superhero-info">
@@ -19,7 +20,7 @@
         <h3>{{superhero.name}}</h3>
         <p>{{superhero.affiliation}}</p>
         <p>{{superhero.phone_number}}</p>
-        <button ng-click="vm.setHeroOrder({{superhero.name}})">Promote</button>
+        <button ng-click="vm.selectHero(superhero.img_url)">Select</button>
       </div>
     </div>
   </main>
