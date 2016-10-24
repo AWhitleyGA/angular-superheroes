@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="superheroes">
 <head>
   <meta charset="UTF-8">
   <title>Superhero Phone Book</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body ng-controller="superheroesController as vm">
+  <header>
+    <h1>Superhero Finder</h1>
+  </header>
+  <main>
+    <div ng-repeat="superhero in vm.superheroes" class="superhero">
+      <div class="superhero-image" ng-style="{'background-image':'url({{superhero.img_url}})','background-size':'cover','background-position':'center top','background-repeat':'no-repeat'}">
+      </div>
+      <div  class="superhero-info ng-class: superhero.universe">
+        <div class="team-logo" ng-style="{'background-image':'url({{superhero.team_logo}})','background-size':'contain','background-position':'center top','background-repeat':'no-repeat'}" ></div>
+        <h3>{{superhero.name}}</h3>
+        <p>{{superhero.affiliation}}</p>
+        <p>{{superhero.phone_number}}</p>
+      </div>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

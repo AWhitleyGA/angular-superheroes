@@ -1,0 +1,74 @@
+
+body {
+  background: black;
+}
+
+
+.marvel {
+  background: red;
+}
+
+
+.team-logo {
+  width: 20px;
+  height: 50px;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+h1 {
+  color: white;
+  font-size: 3.0em;
+}
+main {
+  padding-top: 150px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.superhero {
+  width: 50%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.superhero-image {
+  width: 50%;
+  height: 100%;
+}
+.superhero-info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+.team-logo {
+  width: 15%;
+  margin-left: 80%;
+  margin-right: 5%;
+}
